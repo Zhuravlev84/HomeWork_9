@@ -6,15 +6,15 @@ M = 4; N = 8. -> 30*/
 int M = ReadInt("Введите число от которого считать: ");
 int N = ReadInt("Введите число до которого считать(включительно): ");
 
-Console.WriteLine($"M = {M}; N = {N} --> {NaturalNumber(M, N)}");
+Console.WriteLine($"M = {M}; N = {N} --> {SumNumber(M, N)}");
 
-int NaturalNumber(int m, int n)
+int SumNumber(int m, int n)
 {
     if (m == n)
         return m;
     else
     {
-        return m + NaturalNumber(m + 1, n);
+        return m + SumNumber(m + 1, n);
     }
 }
 
